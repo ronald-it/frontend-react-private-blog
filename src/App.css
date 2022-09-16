@@ -48,7 +48,7 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     background-color: #CA5B1A;
     color: white;
 }

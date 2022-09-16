@@ -9,6 +9,7 @@ import Loginpage from "./components/Loginpage";
 import Overviewpage from "./components/Overviewpage";
 import Blogpostpage from "./components/Blogpostpage";
 import Topmenu from "./components/Topmenu";
+import blogArray from "./data/posts.json"
 
 function App() {
     // We houden in de state bij of iemand is "ingelogd" (simpele versie)
@@ -26,7 +27,9 @@ function App() {
                     <Loginpage/>
                 </Route>
                 <Route exact path="/blogposts">
-                    <Overviewpage/>
+                    <Overviewpage
+                    blogArray={blogArray}
+                    />
                 </Route>
                 <Route path="/blogposts/:blogId">
                     <Blogpostpage/>
