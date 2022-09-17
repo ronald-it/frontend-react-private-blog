@@ -33,16 +33,19 @@ function App() {
                     />
                 </Route>
                 <PrivateRoute
-                    exact path="/products"
+                    exact path="/blogposts"
                     auth={isAuthenticated}
                 >
                     <Overviewpage
                         blogArray={blogArray}
                     />
                 </PrivateRoute>
-                <Route path="/blogposts/:blogId">
+                <PrivateRoute
+                    exact path="/blogposts/:blogId"
+                    auth={isAuthenticated}
+                >
                     <Blogpostpage/>
-                </Route>
+                </PrivateRoute>
             </Switch>
         </>
     );
