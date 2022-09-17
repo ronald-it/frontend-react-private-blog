@@ -19,7 +19,8 @@ function App() {
     return (
         <>
             <Topmenu
-            authentication={isAuthenticated}
+                modifier={toggleIsAuthenticated}
+                authentication={isAuthenticated}
             />
 
             <Switch>

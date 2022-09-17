@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
-function Topmenu({authentication}) {
+function Topmenu({authentication, modifier}) {
     return <nav className="navbar">
         <ul className="navbar-ul">
 
@@ -15,6 +15,16 @@ function Topmenu({authentication}) {
 
             {authentication === false && <NavLink to="/login" activeClassName="active-link">
                 <li>Login</li>
+            </NavLink>}
+
+            {authentication === true && <NavLink to="/">
+                <button
+                    type="button"
+                    className="logOutButton"
+                    onClick={() => {modifier(false)}}
+                >
+                    Uitloggen
+                </button>
             </NavLink>}
         </ul>
     </nav>
