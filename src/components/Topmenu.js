@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 
-function Topmenu() {
+function Topmenu({authentication}) {
     return <nav className="navbar">
         <ul className="navbar-ul">
 
@@ -9,14 +9,13 @@ function Topmenu() {
                 <li>Homepage</li>
             </NavLink>
 
-            <NavLink to="/blogposts" activeClassName="active-link">
+            {authentication === true && <NavLink to="/blogposts" activeClassName="active-link">
                 <li>Blogposts</li>
-            </NavLink>
+            </NavLink>}
 
-            <NavLink to="/login" activeClassName="active-link">
+            {authentication === false && <NavLink to="/login" activeClassName="active-link">
                 <li>Login</li>
-            </NavLink>
-
+            </NavLink>}
         </ul>
     </nav>
 }

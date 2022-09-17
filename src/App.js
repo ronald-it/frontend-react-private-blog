@@ -18,7 +18,9 @@ function App() {
 
     return (
         <>
-            <Topmenu/>
+            <Topmenu
+            authentication={isAuthenticated}
+            />
 
             <Switch>
                 <Route exact path="/">

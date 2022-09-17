@@ -39,12 +39,11 @@
 
 /*---------------Topmenu---------------*/
 .navbar {
-    border: 2px solid black;
+    border: 2px solid #CA5B1A;
     background-color: #CA5B1A;
 }
 
 .navbar-ul {
-    border: 2px solid black;
     list-style: none;
     display: flex;
     flex-direction: row;
