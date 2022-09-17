@@ -1,6 +1,9 @@
 import React from "react";
 
-function Homepage() {
+function Homepage({authentication}) {
+
+    console.log(authentication)
+
     return <>
         <h1>Homepage</h1>
         <h2>Welkom op een fantastisch blogplatform</h2>
